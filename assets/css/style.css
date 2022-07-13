@@ -10,3 +10,249 @@
     --white-color: hsl(0, 0%, 100%);
     --common-ff: 'Space Mono', sans-serif;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: var(--common-ff);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: var(--light-grayish-cyan-color);
+}
+
+.card {
+    margin-top: 5rem;
+    display: flex;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.card-label {
+    font-size: 12px;
+    color: var(--grayish-cyan-color);
+}
+
+.card-input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+.card-form-control {
+    border: 0;
+    outline: 0;
+    text-align: end;
+    width: 100%;
+    background-color: var(--very-light-grayish-cyan-color);
+    width: 80%;
+    padding: .1rem 1.2rem;
+    font-size: 24px;
+    color: var(--very-dark-cyan-color);
+}
+
+.card-tip, .card-custom-tip {
+    text-align: center;
+    font-size: 18px;
+}
+
+.card-tips {
+    width: 91%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-custom-tip {
+    width: 29.02%;
+    margin-top: .8rem;
+    border: 0;
+    background: var(--very-light-grayish-cyan-color);
+    transition: .4s;
+    border-radius: 3px;
+    outline: none;
+    color: var(--very-dark-cyan-color);
+}
+
+.card-custom-tip::placeholder, .card-form-control::placeholder {
+    color: var(--dark-grayish-cyan-color);
+}
+
+
+.card-tip:nth-child(1), .card-tip:nth-child(2), .card-tip:nth-child(3) {
+    margin-top: 0;
+}
+
+.card-tip {
+    margin-top: .8rem;
+    width: 30%;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    color: white;
+    background-color: var(--very-dark-cyan-color);
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.card-tip:hover {
+    cursor: pointer;
+    color: var(--very-dark-cyan-color);
+    background-color: var(--light-grayish-cyan-color);
+}
+
+.card-tip.active {
+    background-color: var(--strong-cyan-color);
+    color: var(--very-dark-cyan-color);
+}
+
+.card-input {
+    position: relative;
+}
+
+.card-custom-tip:focus::placeholder {
+    text-align: center;
+}
+
+.card-custom-tip:focus {
+    outline: 2px solid var(--strong-cyan-color);
+    text-align: end;
+    animation: appear .5s;
+}
+
+.card-input:nth-child(2), .card-tips {
+    margin-bottom: .9rem;
+}
+
+.card-preview {
+    padding: 2rem;
+    margin-left: 3rem;
+    background-color: var(--very-dark-cyan-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-preview-button {
+    margin-top: auto;
+    border: 0;
+    outline: 0;
+    background-color: var(--strong-cyan-color);
+    color: var(--very-dark-cyan-color);
+    padding: .4rem 0;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.card-preview-button:hover {
+    cursor: pointer;
+    background-color: var(--light-grayish-cyan-color);
+}
+
+.card-preview-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+
+.card-preview-text {
+    margin-right: 2.5rem;
+    color: var(--white-color);
+    font-size: 12px;
+}
+
+.card-preview-per-people {
+    font-size: 10px;
+    color: var(--grayish-cyan-color);
+}
+
+.card-preview-value {
+    font-size: 24px;
+    color: var(--strong-cyan-color);
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.symbol-money {
+    font-size: 30px;
+}
+
+.card-custom-tip.active {
+    outline: 2px solid  var(--strong-cyan-color);
+}
+
+.text-error {
+    font-size: 12px;
+    margin-right: 10%;
+    color: red;
+}
+
+.none {
+    display: none;
+}
+
+.input-error {
+    outline: 1px solid red;
+    border-radius: 3px;
+    color: red;
+}
+
+.card-input-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-form-control.input-error:focus {
+    outline: 1px solid red;
+}
+
+.card-form-control:focus {
+    outline: 1px solid var(--strong-cyan-color);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        justify-content: start;
+    }
+    .logo {
+        margin-top: 3rem;
+    }
+    .card {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .card-preview {
+        margin-left: 0;
+        margin-top: 1.9rem;
+    }
+
+    .card-tips {
+        width: 100%;
+    }
+
+    .card-input {
+        width: 110%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

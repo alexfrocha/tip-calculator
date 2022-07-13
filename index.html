@@ -15,13 +15,17 @@
 
   <div class="card">
     <div class="card-form">
-      <label class="card-label" for="#bill">Conta</label>
+      
+      <div class="card-input-info">
+        <label class="card-label" for="#bill">Conta</label>
+        <span class="text-error none">Valor inválido</span>
+      </div>
       <div class="card-input">
         <img src="./images/icon-dollar.svg" alt="" class="card-input-icon">
         <input type="text" id="bill" placeholder="0" class="card-form-control">
       </div>
       
-      <label for="#customTip">Gorjeta %</label>
+      <label for="#customTip" class="card-label">Gorjeta %</label>
       <div class="card-tips">
         <button class="card-tip">5%</button>
         <button class="card-tip">10%</button>
@@ -31,7 +35,10 @@
         <input type="text" name="" placeholder="Custom" id="customTip" class="card-custom-tip">
       </div>
 
-      <label class="card-label" for="#people">Pessoas</label>
+      <div class="card-input-info">
+        <label class="card-label" for="#people">Pessoas</label>
+        <span class="text-error none">Não pode ser 0</span>
+      </div>
       <div class="card-input">
         <img src="./images/icon-person.svg" alt="" class="card-input-icon">
         <input type="text" id="people" placeholder="0" class="card-form-control">
@@ -40,15 +47,15 @@
     <div class="card-preview">
       <div class="card-preview-info">
         <p class="card-preview-text">Valor da Gorjeta <br><span class="card-preview-per-people">/ pessoa</span></p>
-        <p class="card-preview-value">R$2,27</p>
+        <p class="card-preview-value">R<span class="symbol-money">$</span><span id="tipValue">0</span></p>
       </div>
       <div class="card-preview-info">
         <p class="card-preview-text">Valor Total <br><span class="card-preview-per-people">/ pessoa</span></p>
-        <p class="card-preview-value">R$43.53</p>
+        <p class="card-preview-value">R<span class="symbol-money">$</span><span id="total">0</span></p>
       </div>
       <button class="card-preview-button" id="reset">ZERAR</button>
     </div>
   </div>
-  
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>
