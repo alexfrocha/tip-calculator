@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Tip Calculator</title>
+
+</head>
+<body>
+
+  <img src="./images/logo.svg" alt="" class="logo">
+
+  <div class="card">
+    <div class="card-form">
+      <label class="card-label" for="#bill">Conta</label>
+      <div class="card-input">
+        <img src="./images/icon-dollar.svg" alt="" class="card-input-icon">
+        <input type="text" id="bill" placeholder="0" class="card-form-control">
+      </div>
+      
+      <label for="#customTip">Gorjeta %</label>
+      <div class="card-tips">
+        <button class="card-tip">5%</button>
+        <button class="card-tip">10%</button>
+        <button class="card-tip">15%</button>
+        <button class="card-tip">25%</button>
+        <button class="card-tip">50%</button>
+        <input type="text" name="" placeholder="Custom" id="customTip" class="card-custom-tip">
+      </div>
+
+      <label class="card-label" for="#people">Pessoas</label>
+      <div class="card-input">
+        <img src="./images/icon-person.svg" alt="" class="card-input-icon">
+        <input type="text" id="people" placeholder="0" class="card-form-control">
+      </div>
+    </div>
+    <div class="card-preview">
+      <div class="card-preview-info">
+        <p class="card-preview-text">Valor da Gorjeta <br><span class="card-preview-per-people">/ pessoa</span></p>
+        <p class="card-preview-value">R$2,27</p>
+      </div>
+      <div class="card-preview-info">
+        <p class="card-preview-text">Valor Total <br><span class="card-preview-per-people">/ pessoa</span></p>
+        <p class="card-preview-value">R$43.53</p>
+      </div>
+      <button class="card-preview-button" id="reset">ZERAR</button>
+    </div>
+  </div>
+
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  
+</body>
+</html>
